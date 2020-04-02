@@ -7,10 +7,8 @@ class EmailAddressParser
 
   def self.parse
     parsed = []
-    self.class.each do |address|
-      address.delete(",").split(" ")
-      parsed << address unless parsed.include?(address)
-    end
+    self.address.delete(",").split(" ")
+    parsed = self.uniq
     parsed
   end
 
