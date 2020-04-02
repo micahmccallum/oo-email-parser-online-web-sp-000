@@ -6,12 +6,12 @@ class EmailAddressParser
   attr_accessor :addresses
 
   def initialize(addresses)
-    self.addresses = addresses
+    @addresses = addresses
   end
 
-  def parse(addresses)
+  def parse
     parsed = []
-    parsed = addresses.delete(",").split(" ").uniq
+    parsed = @addresses.delete(",").split(" ").uniq
     parsed
   end
 end
