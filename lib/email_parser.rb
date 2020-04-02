@@ -11,7 +11,7 @@ class EmailAddressParser
       address.delete(",").split(" ")
       parsed << address unless parsed.include?(address)
     end
-    parsed      
+    parsed
   end
 
 
