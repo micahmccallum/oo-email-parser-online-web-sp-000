@@ -9,9 +9,9 @@ class EmailAddressParser
     self.addresses = addresses
   end
 
-  def self.parse
+  def parse
     parsed = []
-    parsed = self.class.addresses.delete(",").split(" ").uniq
+    parsed = self.addresses.delete(",").split(" ").uniq
     parsed
   end
 end
