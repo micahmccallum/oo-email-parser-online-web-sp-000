@@ -6,7 +6,12 @@ class EmailAddressParser
   attr_accessor :addresses
 
   def parse(addresses)
-    addresses.delete(",").split(" ")
+    parsed = []
+    addresses.each do |address|
+      address.delete(",").split(" ")
+      parsed << address unless parsed.include?(address)
+    end
+    parsed      
   end
 
 
