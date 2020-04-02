@@ -7,7 +7,7 @@ class EmailAddressParser
 
   def self.parse
     parsed = []
-    self.each do |address|
+    self.class.each do |address|
       address.delete(",").split(" ")
       parsed << address unless parsed.include?(address)
     end
