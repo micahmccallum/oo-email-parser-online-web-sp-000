@@ -6,6 +6,8 @@ class EmailAddressParser
   attr_accessor :addresses
 
   def parse(addresses)
+    addresses.delete(",").split(" ")
+  end
 
 
 
