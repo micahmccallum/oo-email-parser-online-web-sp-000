@@ -7,7 +7,7 @@ class EmailAddressParser
 
   def self.parse
     parsed = []
-    self.address.delete(",").split(" ")
+    self.delete(",").split(" ")
     parsed = self.uniq
     parsed
   end
