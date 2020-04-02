@@ -5,6 +5,10 @@
 class EmailAddressParser
   attr_accessor :addresses
 
+  def initialize(addresses)
+    self.addresses = addresses
+  end
+
   def self.parse
     parsed = []
     parsed = self.class.delete(",").split(" ").uniq
